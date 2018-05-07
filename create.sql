@@ -1,0 +1,1 @@
+CREATE TABLE leagues (id INTEGER PRIMARY KEY, name TEXT)
