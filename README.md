@@ -13,11 +13,11 @@ We are going to build a SQL database to help sports leagues keep track of of the
 
 Build the tables that will make up our Sports Leagues database.  Make sure the tables adhere to the following requirements:
 
-1.  `leagues` has a name
-2.  `teams` have a name and many players
-3.  `players` have a name and belong to a team
-4.  `games` have a date of the date datatype and a location
-5.  `teams` have many games and `games` are played by many teams.  Since this relationship is "many-to-many", we will need a join table.  Let's call this join table `team_games`, and it will have foreign keys to track team and game ids.  These foreign keys are responsible for establishing the many-to-many relationship.  `team_games` will also have a column called score that keeps track of that team's score for that particular game.
+1.  `leagues` have a name and "have many" teams
+2.  `teams` have a name and "have many" players
+3.  `players` have a name and "belong to" a team
+4.  `games` have a date of the *date* datatype and a location.  Each date is recorded in a string in the following format: "YYYY-MM-DD"
+5.  `teams` have many games and `games` are played by many teams.  Since this relationship is "many-to-many", we will need a join table.  Let's call this join table `team_games`, and it will have foreign keys to track team and game ids.  These foreign keys are responsible for establishing the many-to-many relationship.  `team_games` will also have a column called score that keeps track of that team's score for that particular game.  The important point to remember here is that join tables can have columns that are not foreign keys.
 6.  All tables will have an auto-incrementing `PRIMARY KEY` set to the integer data type
 
 
@@ -27,14 +27,18 @@ Once the tables are created, populate the database with data.  Feel free to crea
 
 1.  2 leagues
 2.  4 teams total, with 2 teams in each league
-3.  1 player on each team
+3.  At least 1 player per team
 4.  3 total games, and teams are allowed to play teams from other leagues
 5.  Lastly, we will need to log scores and the relevant team and game ids into the `team_games` join table to build out the "many-to-many" relationship
 
 ### Part 3: `update.sql`
 
-Two players want to change their names.  Fix the `players` table so that the first player's name is switched to "Metta World Peace" and the last player's name is changed to "Chad OchoCinco".
+Two players have decided to change their names.  Fix the `players` table so that the first player's name (id = 1) is switched to "Metta World Peace" and the fourth player's name (id = 4) is changed to "Chad OchoCinco".
 
 ### Part 4: `queries.py`
 
-Write queries in the `queries.py` file to get the tests to pass.  We have seeded the database with different data, so don't expect the data your input in the above files to be returned in your queries.
+Write queries in the `queries.py` file to get the tests to pass.  We have seeded the database with different data, so don't expect the data your input in the above files to be returned in your queries.  Be prepared to use different sorting and grouping methods and aggregate functions.
+
+> **Note:** `select_name_of_player_with_shortest_name`
+
+> This query requires you to select the player with the the shortest name.  Check out the [LENGTH function](https://www.w3schools.com/sql/func_mysql_length.asp).  Is there a sorting method we can use to sort the values returned by the LENGTH function?
