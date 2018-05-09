@@ -37,7 +37,7 @@ Two players have decided to change their names.  Fix the `players` table so that
 
 ### Part 4: `queries.py`
 
-Write queries in the `queries.py` file to get the tests to pass.  We have seeded the database with different data, so don't expect the data your input in the above files to be returned in your queries.  Be prepared to use different sorting and grouping methods and aggregate functions.
+Write queries in the `queries.py` file to get the tests to pass.  We have seeded the database with different data, so don't expect the data your input in the above files to be returned in your queries.  Be prepared to use different sorting and grouping methods and aggregate functions.  Refer to the `seed.sql` file to understand the data populating the database.  Notice we have added a column called `info` to the `games` table.
 
 > **Note:** `select_name_of_player_with_shortest_name`
 
