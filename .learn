@@ -1,0 +1,16 @@
+tags:
+  - sql
+  - joins
+  - select
+  - create
+  - insert
+  - update
+  - join tables
+  - intermediate
+  - jupyter
+  
+languages:
+  - sql
+  - python
+
+jupyter_notebook: true
