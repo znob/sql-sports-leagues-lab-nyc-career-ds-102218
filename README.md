@@ -23,7 +23,7 @@ Build the tables that will make up our Sports Leagues database.  Make sure the t
 
 ### Part 2: `insert.sql`
 
-Once the tables are created, populate the database with data.  Feel free to create fictional leagues, teams, and games.  However, you tables should meet the following requirements.  There should be:
+Once the tables are created, populate the database with data.  Feel free to create fictional leagues, teams, and games.  However, your tables should meet the following requirements.  There should be:
 
 1.  2 leagues
 2.  4 teams total, with 2 teams in each league
@@ -41,4 +41,8 @@ Write queries in the `queries.py` file to get the tests to pass.  We have seeded
 
 > **Note:** `select_name_of_player_with_shortest_name`
 
-> This query requires you to select the player with the the shortest name.  Check out the [LENGTH function](https://www.w3schools.com/sql/func_mysql_length.asp).  Is there a sorting method we can use to sort the values returned by the LENGTH function?
+> This query requires you to select the name of the player with the the shortest name.  Check out the [LENGTH function](https://www.w3schools.com/sql/func_mysql_length.asp).  Is there a sorting method we can use to sort the values returned by the LENGTH function?
+
+## Summary
+
+In this lab we started out by creating tables. We made our tables so that they would have many-to-many, has-many, and belongs-to relationships, enabling us to query information related to records accross tables. We then practiced seeding our database with information on teams, players, and games. Next, we wrote SQL statements that updated records in our database with new names. Finally, we wrote more complex SQL statements that queried and returned information from our database.
